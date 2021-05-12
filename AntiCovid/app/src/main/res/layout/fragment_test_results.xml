@@ -6,13 +6,4 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.google.android.material.appbar.MaterialToolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        android:background="?colorPrimary"
-        app:title="@string/my_previous_test_reports"
-        app:titleTextColor="@color/white"/>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

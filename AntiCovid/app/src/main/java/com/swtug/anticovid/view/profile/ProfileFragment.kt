@@ -1,9 +1,7 @@
 package com.swtug.anticovid.view.profile
 
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Button
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.button.MaterialButton
@@ -18,7 +16,10 @@ class ProfileFragment : BaseFragment() {
     private lateinit var btnChinese: MaterialButton
     private lateinit var btnEnglish: MaterialButton
     private lateinit var toggleGroupLanguage: MaterialButtonToggleGroup
-    private lateinit var btnlogout: Button
+
+    init {
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -47,7 +48,6 @@ class ProfileFragment : BaseFragment() {
     private fun initFields(view: View) {
         btnChinese = view.findViewById(R.id.btn_chinese)
         btnEnglish = view.findViewById(R.id.btn_english)
-        btnlogout = view.findViewById(R.id.logoutbutton)
         toggleGroupLanguage = view.findViewById(R.id.toggle_group_language)
     }
 
@@ -65,10 +65,10 @@ class ProfileFragment : BaseFragment() {
             }
         }
 
-        btnlogout.setOnClickListener {
+/*        btnlogout.setOnClickListener {
             PreferencesRepo.deleteUser(requireContext())
             PreferencesRepo.deleteVaccination(requireContext())
             findNavController().navigate(R.id.action_profileFragment_to_loginFragment)
-        }
+        }*/
     }
 }

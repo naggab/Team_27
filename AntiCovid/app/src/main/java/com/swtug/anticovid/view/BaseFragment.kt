@@ -23,15 +23,15 @@ open class BaseFragment : Fragment() {
             return
         }
 
-        val toolbar = view.findViewById<MaterialToolbar>(R.id.toolbar)
+/*        val toolbar = view.findViewById<MaterialToolbar>(R.id.toolbar)
         (requireActivity() as MainActivity).setSupportActionBar(toolbar)
         (requireActivity() as MainActivity).supportActionBar?.let {  actionBar ->
             actionBar.setDisplayShowHomeEnabled(true)
             actionBar.setDisplayHomeAsUpEnabled(true)
-        }
+        }*/
 
-        toolbar.setNavigationOnClickListener {
+/*        toolbar.setNavigationOnClickListener {
             NavHostFragment.findNavController(this).popBackStack()
-        }
+        }*/
     }
 }
