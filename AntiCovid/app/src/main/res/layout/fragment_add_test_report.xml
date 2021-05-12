@@ -15,6 +15,7 @@
         android:backgroundTint="@color/light_purple"
         android:orientation="horizontal"
         android:paddingTop="32dp"
+        android:layout_margin="16dp"
         android:paddingBottom="32dp"
         android:weightSum="2"
         app:layout_constraintTop_toTopOf="parent">

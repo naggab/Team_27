@@ -19,6 +19,7 @@ import com.swtug.anticovid.view.profile.ProfileFragment
 import com.swtug.anticovid.view.qrCode.AdvancedFeatureFragment
 import com.swtug.anticovid.view.qrCode.QRCodeFragment
 import com.swtug.anticovid.view.testResults.TestResultFragment
+import com.swtug.anticovid.view.vaccineInfo.VaccinationFragment
 
 
 class MainFragment : Fragment() {
@@ -66,12 +67,13 @@ class MainFragment : Fragment() {
     }
 
     private fun setupLayout() {
-        val fragments = listOf<Fragment>(
-            ProfileFragment(),
-            AddTestReportFragment(),
-            TestResultFragment(),
+        val fragments = listOf(
+            AdvancedFeatureFragment(),
             QRCodeFragment(),
-            AdvancedFeatureFragment()
+            VaccinationFragment(),
+            AddTestReportFragment(),
+            ProfileFragment(),
+            TestResultFragment(),
         )
 
         val adapter = ViewStateAdapter(fragments, requireContext(), childFragmentManager, lifecycle)

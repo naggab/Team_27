@@ -1,19 +1,12 @@
 package com.swtug.anticovid.vaccinationInfo
 
-import android.content.Context
 import androidx.core.os.bundleOf
 import androidx.fragment.app.testing.launchFragmentInContainer
-import androidx.fragment.app.testing.withFragment
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
-import androidx.navigation.testing.TestNavHostController
-import androidx.test.core.app.ApplicationProvider
 import androidx.test.espresso.Espresso.onView
-import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.action.ViewActions.click
-import androidx.test.espresso.action.ViewActions.replaceText
 import androidx.test.espresso.assertion.ViewAssertions.matches
-import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.espresso.matcher.ViewMatchers.withId
 import androidx.test.espresso.matcher.ViewMatchers.withText
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -22,8 +15,6 @@ import com.swtug.anticovid.R
 import com.swtug.anticovid.TestUtils
 import com.swtug.anticovid.models.Vaccination
 import com.swtug.anticovid.repositories.PreferencesRepo
-import com.swtug.anticovid.view.vaccineInfo.VaccinatedFragment
-import junit.framework.TestCase.assertEquals
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
