@@ -12,8 +12,8 @@ import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import com.swtug.anticovid.R
-import com.swtug.anticovid.TestUtils
 import com.swtug.anticovid.repositories.PreferencesRepo
+import com.swtug.anticovid.utils.TestUtils
 import com.swtug.anticovid.view.profile.ProfileFragment
 import junit.framework.TestCase
 import org.junit.After
@@ -39,7 +39,6 @@ class SetLanguageTest {
 
         mainScenario.withFragment {
             navController.setGraph(R.navigation.nav_graph)
-            navController.setCurrentDestination(R.id.profileFragment)
             Navigation.setViewNavController(requireView(), navController)
         }
     }

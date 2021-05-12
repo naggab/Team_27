@@ -59,7 +59,9 @@ class MainFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val toolbar = view.findViewById<MaterialToolbar>(R.id.toolbar)
-        (requireActivity() as MainActivity).setSupportActionBar(toolbar)
+
+
+        (requireActivity() as? MainActivity)?.setSupportActionBar(toolbar)
 
         initFields(view)
         initListeners()

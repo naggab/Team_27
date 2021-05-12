@@ -1,4 +1,4 @@
-package com.swtug.anticovid.Utils
+package com.swtug.anticovid.utils
 
 import android.content.Context
 import android.view.View
