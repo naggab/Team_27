@@ -12,7 +12,7 @@ import com.swtug.anticovid.R
 import com.swtug.anticovid.view.BaseFragment
 
 class VaccinatedFragment : BaseFragment() {
-    private val args: VaccinatedFragmentArgs by navArgs()
+    //private val args: VaccinatedFragmentArgs by navArgs()
 
     private lateinit var txtManufacturer: TextInputEditText
     private lateinit var txtFirstDose: TextInputEditText
@@ -30,18 +30,18 @@ class VaccinatedFragment : BaseFragment() {
         initFields(view)
         setupLayout()
 
-        btnQRCode.setOnClickListener {
-            findNavController().navigate(R.id.action_vaccinatedFragment_to_QRCodeFragment)
-        }
+   //     btnQRCode.setOnClickListener {
+      //      findNavController().navigate(R.id.action_vaccinatedFragment_to_QRCodeFragment)
+     //   }
     }
 
     private fun setupLayout() {
-        val vaccination = args.vaccination
+      //  val vaccination = args.vaccination
 
-        txtManufacturer.setText(vaccination.manufacturor)
-        txtFirstDose.setText(vaccination.firstDose.toString())
-        txtSecondDose.setText(vaccination.secondDose.toString())
-        txtInstitution.setText(vaccination.institution)
+     //   txtManufacturer.setText(vaccination.manufacturor)
+     //   txtFirstDose.setText(vaccination.firstDose.toString())
+     //   txtSecondDose.setText(vaccination.secondDose.toString())
+     //   txtInstitution.setText(vaccination.institution)
     }
 
     private fun initFields(view: View) {

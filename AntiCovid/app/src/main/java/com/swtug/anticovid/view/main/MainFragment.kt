@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.navigation.NavController
+import androidx.navigation.fragment.findNavController
 import androidx.viewpager2.widget.ViewPager2
 import androidx.viewpager2.widget.ViewPager2.OnPageChangeCallback
 import com.google.android.material.appbar.MaterialToolbar
@@ -12,6 +13,7 @@ import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.OnTabSelectedListener
 import com.swtug.anticovid.MainActivity
 import com.swtug.anticovid.R
+import com.swtug.anticovid.repositories.PreferencesRepo
 import com.swtug.anticovid.view.addTestReport.AddTestReportFragment
 import com.swtug.anticovid.view.profile.ProfileFragment
 import com.swtug.anticovid.view.qrCode.AdvancedFeatureFragment
@@ -31,6 +33,17 @@ class MainFragment : Fragment() {
 
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
         inflater.inflate(R.menu.menu_profile, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId) {
+            R.id.logout -> {
+                PreferencesRepo.deleteUser(requireContext())
+                PreferencesRepo.deleteVaccination(requireContext())
+                findNavController().navigate(R.id.action_mainFragment_to_loginFragment)
+            }
+        }
+        return true
     }
 
     override fun onCreateView(
@@ -61,8 +74,7 @@ class MainFragment : Fragment() {
             AdvancedFeatureFragment()
         )
 
-        val fragmentManager: FragmentManager = requireActivity().supportFragmentManager
-        val adapter = ViewStateAdapter(fragments, requireContext(), fragmentManager, lifecycle)
+        val adapter = ViewStateAdapter(fragments, requireContext(), childFragmentManager, lifecycle)
         viewPager2.adapter = adapter
     }
 
