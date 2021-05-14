@@ -23,7 +23,7 @@
         app:tabMode="auto"
         app:tabTextColor="@color/design_default_color_primary">
 
-        <com.google.android.material.tabs.TabItem
+<!--        <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/advanced_features" />
@@ -52,7 +52,7 @@
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_previous_test_reports" />
+            android:text="@string/my_previous_test_reports" />-->
 
     </com.google.android.material.tabs.TabLayout>
 
